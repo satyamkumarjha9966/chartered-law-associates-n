@@ -47,9 +47,12 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <div>
-              <h2 className="font-heading text-2xl font-bold mb-2">
+              {/* <h2 className="font-heading text-2xl font-bold mb-2">
                 LegalAdvise<span className="text-accent">Pro</span>
-              </h2>
+              </h2> */}
+              <div className="flex-shrink-0 h-[100px] w-[100px] flex justify-content-center items-center rounded-full overflow-hidden mb-2">
+                <img src="/CLA.jpg" alt="CHARTERED LAW ASSOCIATES" className="w-[100px] h-[100px] rounded-full" />
+              </div>
               <p className="text-primary-foreground/80 leading-relaxed">
                 Your trusted partner for tax and legal consulting. Simplifying compliance 
                 and empowering businesses for over a decade.

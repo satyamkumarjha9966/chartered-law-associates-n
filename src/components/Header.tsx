@@ -41,10 +41,11 @@ const Header = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <div className="flex-shrink-0">
-              <h1 className="font-heading text-2xl font-bold text-primary">
+            <div className="flex-shrink-0 h-[62px] w-[62px] flex justify-content-center items-center rounded-full overflow-hidden">
+              {/* <h1 className="font-heading text-2xl font-bold text-primary">
                 LegalAdvise<span className="text-accent">Pro</span>
-              </h1>
+              </h1> */}
+              <img src="/CLA.jpg" alt="CHARTERED LAW ASSOCIATES" className="w-[62px] h-[62px] rounded-full" />
             </div>
 
             {/* Desktop Navigation */}
