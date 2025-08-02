@@ -13,6 +13,28 @@ import BlogInsightsSection from "@/components/BlogInsightsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
+import type { Metadata } from "next";
+
+// app/page.tsx
+export const metadata : Metadata = {
+  title: "LegalAdvisePro - Trusted Tax & Legal Advisors | GST, ITR, Company Registration",
+  description: "Professional tax and legal consulting services. Expert GST filing, income tax returns, company registration, and business compliance advisory. 10+ years experience, 200+ happy clients.",
+  keywords: "tax consultant, legal advisor, GST filing, income tax return, company registration, business compliance, trademark registration, legal notice",
+  authors: [{ name: "LegalAdvisePro" }],
+  openGraph: {
+    title: "LegalAdvisePro - Trusted Tax & Legal Advisors",
+    description: "Simplifying GST, Tax, and Compliance with Expert Legal Solutions. Professional services for businesses of all sizes.",
+    type: "website",
+    images: ["https://lovable.dev/opengraph-image-p98pqg.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@lovable_dev",
+    images: ["https://lovable.dev/opengraph-image-p98pqg.png"],
+  },
+};
+
+
 
 export default function Home() {
   return (
