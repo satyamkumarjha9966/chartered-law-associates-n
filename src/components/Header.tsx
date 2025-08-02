@@ -1,18 +1,18 @@
-'use client'
+"use client";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Mail } from "lucide-react";
+import Link from "next/link";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Why Choose Us", href: "#why-choose" },
-    { name: "Testimonials", href: "#testimonials" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Contact", href: "/contact" },
+    { name: "Blogs", href: "/blogs" },
   ];
 
   return (
@@ -21,17 +21,25 @@ const Header = () => {
       <div className="bg-primary text-primary-foreground py-2">
         <div className="container mx-auto px-4 flex justify-between items-center text-sm">
           <div className="flex items-center gap-4">
-            <a href="tel:+911234567890" className="flex items-center gap-1 hover:text-accent transition-colors">
+            <a
+              href="tel:+911234567890"
+              className="flex items-center gap-1 hover:text-accent transition-colors"
+            >
               <Phone className="w-3 h-3" />
               +91 123-456-7890
             </a>
-            <a href="mailto:info@lawfirm.com" className="flex items-center gap-1 hover:text-accent transition-colors">
+            <a
+              href="mailto:info@lawfirm.com"
+              className="flex items-center gap-1 hover:text-accent transition-colors"
+            >
               <Mail className="w-3 h-3" />
               info@lawfirm.com
             </a>
           </div>
           <div className="hidden md:block">
-            <span className="text-accent font-medium">Free Consultation Available</span>
+            <span className="text-accent font-medium">
+              Free Consultation Available
+            </span>
           </div>
         </div>
       </div>
@@ -45,20 +53,26 @@ const Header = () => {
               {/* <h1 className="font-heading text-2xl font-bold text-primary">
                 LegalAdvise<span className="text-accent">Pro</span>
               </h1> */}
-              <img src="/CLA.jpg" alt="CHARTERED LAW ASSOCIATES" className="w-[62px] h-[62px] rounded-full" />
+              <Link href={"/"}>
+                <img
+                  src="/CLA.jpg"
+                  alt="CHARTERED LAW ASSOCIATES"
+                  className="w-[62px] h-[62px] rounded-full"
+                />
+              </Link>
             </div>
 
             {/* Desktop Navigation */}
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 {navigation.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
                     href={item.href}
                     className="text-foreground hover:text-accent px-3 py-2 text-sm font-medium transition-colors font-body"
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -76,7 +90,11 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="text-foreground hover:text-accent"
               >
-                {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {isMenuOpen ? (
+                  <X className="w-6 h-6" />
+                ) : (
+                  <Menu className="w-6 h-6" />
+                )}
               </button>
             </div>
           </div>
