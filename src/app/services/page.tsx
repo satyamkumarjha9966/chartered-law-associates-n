@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calculator, FileText, Building, Scale, Users, Copyright } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const Services = () => {
   const services = [
@@ -82,7 +82,7 @@ const Services = () => {
               {services.map((service) => {
                 const IconComponent = service.icon;
                 return (
-                  <Link key={service.id} to={`/services/${service.id}`}>
+                  <Link key={service.id} href={`/services/${service.id}`}>
                     <Card className="group hover:shadow-large transition-all duration-300 h-full cursor-pointer border-0 shadow-soft hover:-translate-y-1">
                       <div className="aspect-video overflow-hidden rounded-t-lg">
                         <img
@@ -140,7 +140,7 @@ const Services = () => {
                 and provide customized solutions that ensure complete compliance and growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact">
+                <Link href="/contact">
                   <Button variant="accent" size="lg">
                     Get Free Consultation
                   </Button>

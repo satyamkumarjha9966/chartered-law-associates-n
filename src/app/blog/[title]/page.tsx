@@ -29,9 +29,9 @@ import {
   Eye,
   Bookmark
 } from "lucide-react";
-import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 const BlogPost = () => {
   const [likes, setLikes] = useState(42);
@@ -593,7 +593,7 @@ const BlogPost = () => {
                     Our team of experienced legal professionals is ready to help you navigate complex labour law requirements and ensure your business stays compliant.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Link to="/contact">
+                    <Link href="/contact">
                       <Button variant="secondary" size="lg" className="w-full sm:w-auto">
                         <Phone className="w-4 h-4 mr-2" />
                         Get Free Consultation
